@@ -1,11 +1,11 @@
 
-str = 'i love ruby'
+str = 'i  love ruby'
 def format(str, arg)
   case arg
   when :a
-    (str.split.each {|v| v.capitalize!}).join
+    (str.split.each { |v| v.capitalize! }).join
   when :b
-    str.split.join('_')
+    str.tr(' ', '_')
   when :c
     str.split.join('-')
   else

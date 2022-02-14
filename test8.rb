@@ -1,5 +1,1 @@
-
-puts "How to translate ball?"
-
-
-gets
+10.times { puts 'Спартак - чемпион!' }
