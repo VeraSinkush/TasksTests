@@ -1,4 +1,3 @@
-
 class Test_1
   def test_1
 
@@ -22,9 +21,6 @@ class Test_1
   end
 end
 
-c = Test_1.new
-c.test_1
-
 class Test_2
   def test_2
     print 'Ведите размер матрицы: '
@@ -41,9 +37,6 @@ class Test_2
     end
   end
 end
-
-b = Test_2.new
-b.test_2
 
 class Test_3
   def test_3
@@ -62,9 +55,6 @@ class Test_3
 
   end
 end
-
-c = Test_3.new
-c.test_3
 
 class Test_4
   def test_4
@@ -89,9 +79,6 @@ class Test_4
   end
 end
 
-d = Test_4.new
-d.test_4
-
 class Test_5
   def test_5
 
@@ -115,11 +102,6 @@ class Test_5
     find(testabc, :key9)
   end
 end
-
-e = Test_5.new
-e.test_5
-
-
 
 class Test_6
   def test_6
@@ -162,16 +144,26 @@ class Test_6
   end
 end
 
-f = Test_6.new
-f.test_6
+class BeginTest
+  def do_a_test(n)
+    test = eval "Test_#{n}.new"
+    puts "Делаю Задание ##{n}"
+    eval("test.test_#{n}")
+  end
+end
 
+b_t = BeginTest.new
+while true do
+  print "Наберите номер задачи от 1 до 6 (0 - выход):"
+  n = gets.to_i
+  case n
+  when 1..6
+    b_t.do_a_test(n)
+  when 0
+    break
+  else
+    puts 'Некорректный ввод'
 
-
-
-
-
-
-
-
-
+  end
+end
 
